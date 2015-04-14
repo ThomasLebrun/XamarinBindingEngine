@@ -48,6 +48,6 @@ You'll be able to find more details on my blog (http://blog.thomaslebrun.net/201
 	local:Binding="{Source=SampleBool, Target=Text, Mode=TwoWay, Converter=BooleanToStringConverter, ConverterParameter='You can put any string here'}" />
 ```
 
-Feel free to reach me on my blog (http://blog.thomaslebrun.net/), via Twitter (https://twitter.com/thomas_lebrun) or using the Issues section (https://github.com/ThomasLebrun/XamarinBindingEngine/issues) !
+Feel free to reach me on my blog (http://blog.thomaslebrun.net/), via Twitter (https://twitter.com/thomas_lebrun) or using the Issues section (https://github.com/ThomasLebrun/XamarinBindingEngine/issues).
 
 Also, I'm accepting pull requests so don't hesitate to collaborate!
