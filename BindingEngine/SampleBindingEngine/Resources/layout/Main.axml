@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/ChangeActivityButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Activity" />
+<!-- Simple OneWay binding -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Hello"
+        local:Binding="{Source=SampleText, Target=Text}" />
+<!-- Simple TwoWay binding -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Hello"
+        local:Binding="{Source=SampleText, Target=Text, Mode=TwoWay}" />
+<!-- Binding an event to a command -->
+    <Button
+        android:id="@+id/MyButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Change EditText From Command"
+        local:Binding="{Source=ButtonClickCommand, Target=Click}" />
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Hello"
+        local:Binding="{Source=SampleText2, Target=Text, Mode=TwoWay;Source=TextCommand, Target=TextChanged}" />
+<!-- Binding an event to a method -->
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Change EditText From Method"
+        local:Binding="{Source=ClickOnButton, Target=Click}" />
+<!-- Binding with a converter -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Hello"
+        local:Binding="{Source=SampleBool, Target=Text, Mode=TwoWay, Converter=BooleanToStringConverter}" />
+<!-- Binding with a converter & converter parameter -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Hello"
+        local:Binding="{Source=SampleBool, Target=Text, Mode=TwoWay, Converter=BooleanToStringConverter, ConverterParameter='You can put any string here'}" />
+<!-- Binding on nested property -->
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Hello"
+        local:Binding="{Source=Person.LastName, Target=Text, Mode=TwoWay}" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Person instance from Command"
+        local:Binding="{Source=ChangePersonCommand, Target=Click}" />
+</LinearLayout>
